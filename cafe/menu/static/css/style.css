@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito|Ubuntu|Varela+Round|Herr+Von+Muellerhoff');
+
+.home_body {
+	background-image: url(../images/dessert.jpg); 
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed; 
+	font-family: 'Nunito', sans-serif;
+	color: #eaedf2;
+
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	-webkit-transition: background 1s ease-in-out;
+	-moz-transition: background 1s ease-in-out;
+	-o-transition: background 1s ease-in-out;
+	-ms-transition: background 1s ease-in-out;    
+	transition: background 2s ease-in-out;
+}
+
+.brand {
+	text-align: center;
+	margin: 10px;
+	padding-top: 20px;
+}
+
+.address-bar {
+	text-align: center;
+}
+
+#transparent-div {
+	text-align: center;
+	width: 100%;
+	height: 50px;
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	font-size: 13pt;
+	margin: auto;
+}
+
+.nav-description {
+	font-size: 10pt; 
+	font-weight: lighter; 
+	letter-spacing: 2px;
+}
+
+#remove-a-property {
+	color: white;
+	text-decoration: none;
+}
+
+#nav-item:hover {
+	background: rgba(130, 130, 130, 0.5);
+}
+
+.footer {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+	font-size: 8pt;
+}
+
+.logo {
+	width: 60px;
+	height: 60px;
+	top: 0;
+}
+
+.navbar {
+   background-color: transparent;
+   background: transparent;
+   border-color: transparent;
+   padding: 10px;
+}
+
+.info_header {
+	text-align: center;
+}
+
+.decorator {
+	text-align: center;
+	max-width: 250px;
+	margin: 0px auto 20px auto;
+	position: relative;
+}
+
+#about_description {
+	margin-top: 130px;
+	background: rgba(237, 238, 239, 0.85);
+	min-height: 60vh;
+	color: black;
+	font-size: 14pt;
+}
+
+#about_detail {
+	margin: -3em 30px 30px 30px; 
+	background: white;
+	min-height: 70vh;
+}
+
+#contact_detail {
+	margin: -3em 30px 30px 30px; 
+	background: white;
+	min-height: 70vh;
+	font-family: "Ubuntu", sans-serif;
+	font-size: 13pt;
+}
+
+.about_image {
+	width: 550px;
+}
+
