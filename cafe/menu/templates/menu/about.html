@@ -1,6 +1,67 @@
-{% extends "menu/base_nav.html" %}
+{% extends "menu/base.html" %}
 {% block body %}
-	<h1 class="info_header" style="font-family: 'Herr Von Muellerhoff', cursive; letter-spacing: 3px; color: #eda81e; font-size: 60px;"> About Us </h1>
+
+    <div id="wrapper">
+        <!-- main content -->
+        <main>
+            <!-- The header for content -->
+            <header class="detail">
+                <a href=".." class="back" data-transition="slide-from-top">
+                    <h1>back</h1>
+                </a>
+                <section>
+                    <h3 class="badge">The story</h3>
+                    <h1>About us</h1>
+                </section>
+            </header>
+            <!-- end header -->
+            <div class="content-wrap">
+                <div class="content">
+                    <i class="icon bg icon-CommentwithLines"></i>
+                    <section>
+                        <header>
+                            <h2>What we do</h2>
+                            <h4 class="serif">Our little story</h4>
+                        </header>
+
+                        <section>
+							<div>
+								<img src="../static/images/about.jpg" class="about_image">
+							</div>
+
+							<div style="margin-top: 30px; font-family: 'Ubuntu', sans-serif; font-size: 13pt;">
+								<p>Khang Thinh Castle is established in 2016 by Khang Thinh Ltd. Company. Originally located in Long Thanh town, Dong Nai province, we aim to create an eatery and drinkery world that would provide high quality food and drink and offer an environment where everyone could enjoy at any time.
+								</p>
+
+								<p>Our Objectives:<p>
+								<ul>
+								<li>To provide the highest quality of food and drink at the lowest possible price</li>
+								<li>To offer alternative food with emphasis on freshly prepared, natural and ethnic specialities</li>
+								<li>To offer service during non-peak hours when all other food services are closed</li>
+								<li>To foster an atmosphere of concern and responsiveness to ecological practices</li>
+								<li>To create a relaxing and enjoyable environment for everyone at any age</li>
+								<li>To employ people to the maximum extent possible</li>
+								</ul>
+							</div>
+                        </section>
+                    </section>
+                </div>
+            </div>
+            <div data-remodal-id="modal">
+                <i class="icon bg icon-CommentwithLines"></i>
+                <button data-remodal-action="close" class="remodal-close"></button>
+                <h1></h1>
+                <p></p>
+                <div class="signature center">
+                    <h6>-CHEF-</h6>
+                    <h5>Pierre Gabant</h5>
+                </div>
+            </div>
+        </main>
+        <!-- end of main content -->
+    </div>
+
+	<!--<h1 class="info_header" style="font-family: 'Herr Von Muellerhoff', cursive; letter-spacing: 3px; color: #eda81e; font-size: 60px;"> About Us </h1>
 	<div class="decorator">
 		<i class="fa fa-ellipsis-h" aria-hidden="true"></i>
 		<i class="fa fa-ellipsis-h" aria-hidden="true"></i>
@@ -30,5 +91,5 @@
 				</ul>
 			</div>
 		</div>
-	</div>
+	</div>-->
 {% endblock %}

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Dish
+from models import Dish
 
 # Create your views here.
 def home(request):

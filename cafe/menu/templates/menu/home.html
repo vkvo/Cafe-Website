@@ -1,32 +1,85 @@
 {% extends "menu/base.html" %}
 {% block body %}
-<body class="home_body" id="home_body">
-	<div class="brand">
-		<h1 style="font-family: 'Herr Von Muellerhoff', cursive; letter-spacing: 1px; font-size: 30pt; text-align: center;">Khang Thinh Cafe</h1>
-	</div>
-	<h6 class="address-bar" style="letter-spacing: 1px;"><br>121 Duong 769, Xa Loc An, Huyen Long Thanh, Tinh Dong Nai &nbsp|&nbsp Booking: +84 932 556 768 (Ms. Quynh)</h6>
-	<br>
-	<div class="container-fluid" id="transparent-div">
-		<div class="col-md-3" id="nav-item">
-			<a href="about" id="remove-a-property">ABOUT US</a>
-			<p class="nav-description"><i>get to know our mission</i>
-		</div>
-		<div class="col-md-3" id="nav-item">
-			<a href="menu" id="remove-a-property">MENU</a>
-			<p class="nav-description"><i>our refreshing drinks and desserts</i></p>
-		</div>
-		<div class="col-md-3" id="nav-item">
-			<a href="career" id="remove-a-property">CAREER</a>
-			<p class="nav-description"><i>be part of our team</i>
-		</div>
-		<div class="col-md-3" id="nav-item">
-			<a href="contact" id="remove-a-property">CONTACT US</a>
-			<p class="nav-description"><i>have enquiries or need directions?</i>
-		</div>
-	</div>
-
-	<div class="footer" style="letter-spacing: 1px; color: white;">
-		<p class="muted pull-right"> © 2016 Khang Thinh. All rights reserved &nbsp &nbsp &nbsp</p>
-	</div>
-</body>
+	
+	<div id="wrapper">
+        <!-- main content -->
+        <main>
+            <header>
+                <a href="#" class="logo">
+                    <h1>Khang Thinh Cafe</h1>
+                </a>
+            </header>
+            <!-- The navigation -->
+            <nav class="strokes">
+                <ul id="navigation">
+                    <li>
+                        <a href="about" data-transition="slide-to-top">
+                            <section>
+                            <h1>ABOUT US</h1>
+                                <h5 class="badge-rounded">get to know our mission</h5>
+                            </section>
+                            <footer>
+                                <i class="icon icon-CommentwithLines"></i>
+                                <h5 class="serif">Our story</h5>
+                                <p>Read more</p>
+                            </footer>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="menu" data-transition="slide-to-top">
+                            <section>
+                                <h1>MENU</h1>
+                                <h5 class="badge-rounded">our refreshing drinks and desserts</h5>
+                            </section>
+                            <footer>
+                                <i class="icon icon-Food"></i>
+                                <h5 class="serif">Our kitchen</h5>
+                                <p>Dishes and drinks</p>
+                            </footer>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="career" data-transition="slide-to-top">
+                            <section>
+                                <h1>CAREER</h1>
+                                <h5 class="badge-rounded">be part of our team</h5>
+                            </section>
+                            <footer>
+                                <i class="icon icon-CreateNew"></i>
+                                <h5 class="serif">News</h5>
+                                <p>And stories</p>
+                            </footer>
+                        </a>
+                    </li>
+					<li>
+                        <a href="contact" data-transition="slide-to-top">
+                            <section>
+                                <h1>CONTACT US</h1>
+                                <h5 class="badge-rounded">have enquiries or need directions?</h5>
+                            </section>
+                            <footer>
+                                <i class="icon icon-LocationMarker"></i>
+                                <h5 class="serif">Leave us</h5>
+                                <p>A message</p>
+                            </footer>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- End navigation -->
+            <div class="overlay"></div>
+            <div data-remodal-id="modal">
+                <i class="icon bg icon-CommentwithLines"></i>
+                <button data-remodal-action="close" class="remodal-close"></button>
+                <h1></h1>
+                <p></p>
+                <div class="signature center">
+                    <h6>-CHEF-</h6>
+                    <h5>Pierre Gabant</h5>
+                </div>
+            </div>
+        </main>
+        <!-- end of main content -->
+    </div>
+	
 {% endblock %}
