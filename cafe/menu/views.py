@@ -17,3 +17,6 @@ def contact(request):
 
 def menu(request):
 	return render(request, 'menu/menu.html')
+
+def full_menu(request):
+	return render(request, 'menu/full_menu.html')

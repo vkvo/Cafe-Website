@@ -7,4 +7,5 @@ urlpatterns = [
 	url(r'^career/', views.career, name='career'),
 	url(r'^menu/', views.menu, name='menu'),
 	url(r'^contact/', views.contact, name='contact'),
+	url(r'^full-menu', views.full_menu, name='full-menu'),
 ]

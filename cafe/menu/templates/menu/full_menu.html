@@ -1,0 +1,89 @@
+{% extends "menu/base.html" %}
+{% block body %}
+
+	<div id="wrapper">
+		<!-- main content -->
+		<main>
+			<!-- The header for content -->
+			<header class="detail">
+				<a href=".." class="back" data-transition="slide-from-top">
+					<h1>back</h1>
+				</a>
+				<section>
+					<h3 class="badge">Our Menu</h3>
+					<h1>Food & Drink</h1>
+				</section>
+			</header>
+			<!-- end header -->
+			<div class="content-wrap">
+                <div class="content">
+                    <i class="icon bg icon-Food"></i>
+                    <header class="with-subnav">
+                        <ul>
+                            <li class="btn ">
+                                <a href="menu">
+                                    <h4>Promotion</h4>
+                                </a>
+                            </li>
+                            <li class="btn active">
+                                <a href="full-menu">
+                                    <h4>Full Menu</h4>
+                                </a>
+                            </li>
+                        </ul>
+                    </header>
+
+                    <!-- menu content -->
+                    <header>
+                        <h3 class="badge">• starters •</h3>
+                    </header>
+
+                    <ul class="price-list">
+                        <li>
+                            <div class="top">
+                                <h3 class="title">Light platter</h3>
+                                <h4 class="price badge">$ 18.5</h4>
+                            </div>
+                            <p class="description">Herring, breaded fish and pork roast</p>
+                        </li>
+                        <li>
+                            <div class="top">
+                                <h3 class="title">Lagune Platte</h3>
+                                <h4 class="price badge">$ 22.0</h4>
+                            </div>
+                            <p class="description">Herring, breaded fish, pork roast and brie</p>
+                        </li>
+                        <li>
+                            <div class="top">
+                                <h3 class="title">2 slices of pork roast</h3>
+                                <h4 class="price badge">$ 18.0</h4>
+                            </div>
+                            <p class="description">Cucumber salad, red cabbage and bread</p>
+                        </li>
+                        <li>
+                            <div class="top">
+                                <h3 class="title">Breaded fish</h3>
+                                <h4 class="price badge">$ 15.0</h4>
+                            </div>
+                            <p class="description">Remoulade, lemon, rye bread and butter</p>
+                        </li>
+                    </ul>
+
+
+                    <!-- end menu content -->
+                </div>
+            </div>
+			<div data-remodal-id="modal">
+				<i class="icon bg icon-CommentwithLines"></i>
+				<button data-remodal-action="close" class="remodal-close"></button>
+				<h1></h1>
+				<p></p>
+				<div class="signature center">
+					<h6>-CHEF-</h6>
+					<h5>Pierre Gabant</h5>
+				</div>
+			</div>
+		</main>
+		<!-- end of main content -->
+	</div>
+{% endblock %}
