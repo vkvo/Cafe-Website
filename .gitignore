@@ -91,3 +91,5 @@ ENV/
 # Custom ignore
 *.pyc 
 .DS_Store
+*.DS_Store
+
