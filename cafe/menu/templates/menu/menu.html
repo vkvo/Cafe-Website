@@ -2,101 +2,134 @@
 {% block body %}
 
 	<div id="wrapper">
-        <!-- main content -->
-        <main>
-            <!-- The header for content -->
-            <header class="detail">
-                <a href=".." class="back" data-transition="slide-from-top">
-                    <h1>back</h1>
-                </a>
-                <section>
-                    <h3 class="badge">The story</h3>
-                    <h1>About us</h1>
-                </section>
-            </header>
-            <!-- end header -->
-            <div class="content-wrap">
+		<!-- main content -->
+		<main>
+			<!-- The header for content -->
+			<header class="detail">
+				<a href=".." class="back" data-transition="slide-from-top">
+					<h1>back</h1>
+				</a>
+				<section>
+					<h3 class="badge">Our Menu</h3>
+					<h1>Food & Drink</h1>
+				</section>
+			</header>
+			<!-- end header -->
+			<div class="content-wrap">
                 <div class="content">
-                    <i class="icon bg icon-CommentwithLines"></i>
-                    <section>
-                        <header>
-                            <h2>Menu of our food and drinks</h2>
-                            <h4 class="serif">From delicious cakes to coffee and more</h4>
-                        </header>
+                    <i class="icon bg icon-Food"></i>
+                    <header class="with-subnav">
+                        <ul>
+                            <li class="btn active">
+                                <a href="menu">
+                                    <h4>Promotion</h4>
+                                </a>
+                            </li>
+                            <li class="btn ">
+                                <a href="full-menu">
+                                    <h4>Full Menu</h4>
+                                </a>
+                            </li>
+                        </ul>
+                    </header>
 
-                        <section>
-							<div>
-								<img src="../static/images/about.jpg" class="about_image">
-							</div>
+                    <!-- menu content -->
+                    <header>
+                        <h3 class="badge">• starters •</h3>
+                    </header>
 
-                            <p><a href="#" class="embed-link">Click this link to view Menu.</a></p>
-                            <!--<div id="results" class="hidden"></div>-->
-                            <div id="pdf"></div>
+                    <ul class="price-list">
+                        <li>
+                            <div class="top">
+                                <h3 class="title">Parisian Hamburger</h3>
+                                <h4 class="price badge">$ 18.0</h4>
+                            </div>
+                            <p class="description">Raw onions, beetroots, pickles, capers, horseradish, egg yolk</p>
+                        </li>
+                        <li>
+                            <div class="top">
+                                <h3 class="title">Minced meat steak</h3>
+                                <h4 class="price badge">$ 22.0</h4>
+                            </div>
+                            <p class="description">Fried onions, white potatoes, pickled cucumber and gravy</p>
+                        </li>
+                        <li>
+                            <div class="top">
+                                <h3 class="title">Delgardosteak</h3>
+                                <h4 class="price badge">$ 22.0</h4>
+                            </div>
+                            <p class="description">Mustard, tomato, cheese, fried potatoes and gravy</p>
+                        </li>
+                        <li>
+                            <div class="top">
+                                <h3 class="title">Pork rib roast</h3>
+                                <h4 class="price badge">$ 25.0</h4>
+                            </div>
+                            <p class="description">White potatoes, red cabbage, pickled cucumber and gravy</p>
+                        </li>
+                        <li>
+                            <div class="top">
+                                <h3 class="title">Today’s special</h3>
+                                <h4 class="price badge">$ 22.0</h4>
+                            </div>
+                            <p class="description">Everyday fresh</p>
+                        </li>
+                    </ul>
+                    <header>
+                        <h3 class="badge">• specials •</h3>
+                    </header>
 
-                            <script>
-                                document.querySelector(".embed-link").addEventListener("click", function (e){
+                    <ul class="price-list">
+                        <li>
+                            <div class="top">
+                                <h3 class="title">Breaded shrimps</h3>
+                                <h4 class="price badge">$ 22</h4>
+                            </div>
+                            <p class="description">Salad, dressing, lemon, bread and butter</p>
+                        </li>
+                        <li>
+                            <div class="top">
+                                <h3 class="title">Lagune-cocktail</h3>
+                                <h4 class="price badge">$ 19</h4>
+                            </div>
+                            <p class="description">Shrimps, pineapple, salad, dressing, bread and butter</p>
+                        </li>
+                        <li>
+                            <div class="top">
+                                <h3 class="title">Smoked salmon</h3>
+                                <h4 class="price badge">$ 16</h4>
+                            </div>
+                            <p class="description">Asparagus, herb dressing, salad, bread and butter</p>
+                        </li>
+                        <li>
+                            <div class="top">
+                                <h3 class="title">Green salad</h3>
+                                <h4 class="price badge">$ 22</h4>
+                            </div>
+                            <p class="description">Dressing, bread and butter</p>
+                        </li>
+                    </ul>
 
-                                    e.preventDefault();
+                    <aside class="notice">
+                        <i class="icon bg inverted icon-Notification"></i>
+                        <h3>Chef's notice</h3>
+                        <p>We have fresh tuna coming in every day ask for our specials. Let us surprise you.</p>
+                    </aside>
 
-                                    this.setAttribute("class", "hidden");
-
-                                    var options = {
-                                        pdfOpenParams: {
-                                            pagemode: "thumbs",
-                                            navpanes: 0,
-                                            toolbar: 0,
-                                            statusbar: 0,
-                                            view: "FitV"
-                                        },
-                                        width: "100%",
-                                        height: "100rem"
-                                    };
-
-                                    var myPDF = PDFObject.embed("../static/files/Menu.pdf", "#pdf", options);
-
-                                    var el = document.querySelector("#results");
-                                    el.setAttribute("class", (myPDF) ? "success" : "fail");
-                                    el.innerHTML = (myPDF) ? "PDFObject successfully added an &lt;embed> element to the page!" : "Uh-oh, the embed didn't work.";
-
-                                });
-                            </script>
-                            
-                        </section>
-                    </section>
+                    <!-- end menu content -->
                 </div>
             </div>
-            <div data-remodal-id="modal">
-                <i class="icon bg icon-CommentwithLines"></i>
-                <button data-remodal-action="close" class="remodal-close"></button>
-                <h1></h1>
-                <p></p>
-                <div class="signature center">
-                    <h6>-CHEF-</h6>
-                    <h5>Pierre Gabant</h5>
-                </div>
-            </div>
-        </main>
-        <!-- end of main content -->
-    </div>
-
-	<!--<h1 class="info_header" style="font-family: 'Herr Von Muellerhoff', cursive; letter-spacing: 3px; color: #eda81e; font-size: 60px;"> Menu </h1>
-	<div class="decorator">
-		<i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-		<i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-		<i class="fa fa-star-o"></i>
-		<i class="fa fa-star-o star-1x"></i>
-		<i class="fa fa-star-o"></i>
-		<i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-		<i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+			<div data-remodal-id="modal">
+				<i class="icon bg icon-CommentwithLines"></i>
+				<button data-remodal-action="close" class="remodal-close"></button>
+				<h1></h1>
+				<p></p>
+				<div class="signature center">
+					<h6>-CHEF-</h6>
+					<h5>Pierre Gabant</h5>
+				</div>
+			</div>
+		</main>
+		<!-- end of main content -->
 	</div>
-	<div class="container-fluid" id="about_description">
-		<div class="container-fluid" id="about_detail">
-			<div class="col-md-6" style="margin-top: 30px;">
-				<img src="../static/images/about.jpg" class="about_image">
-			</div>
-			<div class="col-md-6" style="margin-top: 30px; font-family: 'Ubuntu', sans-serif; font-size: 13pt;">
-				<p>To be updated</p>
-			</div>
-		</div>
-	</div>-->
 {% endblock %}

@@ -38,36 +38,38 @@
                         <h3 class="badge">• starters •</h3>
                     </header>
 
-                    <ul class="price-list">
-                        <li>
-                            <div class="top">
-                                <h3 class="title">Light platter</h3>
-                                <h4 class="price badge">$ 18.5</h4>
-                            </div>
-                            <p class="description">Herring, breaded fish and pork roast</p>
-                        </li>
-                        <li>
-                            <div class="top">
-                                <h3 class="title">Lagune Platte</h3>
-                                <h4 class="price badge">$ 22.0</h4>
-                            </div>
-                            <p class="description">Herring, breaded fish, pork roast and brie</p>
-                        </li>
-                        <li>
-                            <div class="top">
-                                <h3 class="title">2 slices of pork roast</h3>
-                                <h4 class="price badge">$ 18.0</h4>
-                            </div>
-                            <p class="description">Cucumber salad, red cabbage and bread</p>
-                        </li>
-                        <li>
-                            <div class="top">
-                                <h3 class="title">Breaded fish</h3>
-                                <h4 class="price badge">$ 15.0</h4>
-                            </div>
-                            <p class="description">Remoulade, lemon, rye bread and butter</p>
-                        </li>
-                    </ul>
+
+                            <p><a href="#" class="embed-link">Click this link to view Menu.</a></p>
+                            <!--<div id="results" class="hidden"></div>-->
+                            <div id="pdf"></div>
+
+                            <script>
+                                document.querySelector(".embed-link").addEventListener("click", function (e){
+
+                                    e.preventDefault();
+
+                                    this.setAttribute("class", "hidden");
+
+                                    var options = {
+                                        pdfOpenParams: {
+                                            pagemode: "thumbs",
+                                            navpanes: 0,
+                                            toolbar: 0,
+                                            statusbar: 0,
+                                            view: "FitV"
+                                        },
+                                        width: "100%",
+                                        height: "100rem"
+                                    };
+
+                                    var myPDF = PDFObject.embed("../static/files/Menu.pdf", "#pdf", options);
+
+                                    var el = document.querySelector("#results");
+                                    el.setAttribute("class", (myPDF) ? "success" : "fail");
+                                    el.innerHTML = (myPDF) ? "PDFObject successfully added an &lt;embed> element to the page!" : "Uh-oh, the embed didn't work.";
+
+                                });
+                            </script>
 
 
                     <!-- end menu content -->
