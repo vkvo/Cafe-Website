@@ -28,9 +28,39 @@
 							<div>
 								<img src="../static/images/about.jpg" class="about_image">
 							</div>
-							<div style="margin-top: 30px; font-family: 'Ubuntu', sans-serif; font-size: 13pt;">
-								<p>To be updated</p>
-							</div>
+
+                            <p><a href="#" class="embed-link">Click this link to view Menu.</a></p>
+                            <!--<div id="results" class="hidden"></div>-->
+                            <div id="pdf"></div>
+
+                            <script>
+                                document.querySelector(".embed-link").addEventListener("click", function (e){
+
+                                    e.preventDefault();
+
+                                    this.setAttribute("class", "hidden");
+
+                                    var options = {
+                                        pdfOpenParams: {
+                                            pagemode: "thumbs",
+                                            navpanes: 0,
+                                            toolbar: 0,
+                                            statusbar: 0,
+                                            view: "FitV"
+                                        },
+                                        width: "100%",
+                                        height: "100rem"
+                                    };
+
+                                    var myPDF = PDFObject.embed("../static/files/Menu.pdf", "#pdf", options);
+
+                                    var el = document.querySelector("#results");
+                                    el.setAttribute("class", (myPDF) ? "success" : "fail");
+                                    el.innerHTML = (myPDF) ? "PDFObject successfully added an &lt;embed> element to the page!" : "Uh-oh, the embed didn't work.";
+
+                                });
+                            </script>
+                            
                         </section>
                     </section>
                 </div>
